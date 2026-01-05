@@ -150,7 +150,7 @@
                                 class="mx-auto mb-5 flex items-center justify-center rounded-full bg-orange-100"
                             >
                                 <img
-                                    :src="'url(images/news/bang-chu-cai-pinyin.jpg)'"
+                                    src="/images/news/bang-chu-cai-pinyin.jpg"
                                     alt="property"
                                     class="w-full h-52 sm:h-56 object-cover rounded-t"
                                 />
@@ -175,7 +175,7 @@
                                 class="mx-auto mb-5 flex items-center justify-center rounded-full bg-orange-100"
                             >
                                 <img
-                                    :src="'url(images/news/lap-ke-hoach-tu-vung.jpg)'"
+                                    src="/images/news/lap-ke-hoach-tu-vung.jpg"
                                     alt="property"
                                     class="w-full h-52 sm:h-56 object-cover rounded-t"
                                 />
@@ -200,7 +200,7 @@
                                 class="mx-auto mb-5 flex items-center justify-center rounded-full bg-orange-100"
                             >
                                 <img
-                                    :src="'url(images/news/tieng-trung-giao-tiep-co-ban.jpg)'"
+                                    src="/images/news/tieng-trung-giao-tiep-co-ban.jpg"
                                     alt="property"
                                     class="w-full h-52 sm:h-56 object-cover rounded-t"
                                 />
