@@ -129,7 +129,7 @@
             </div>
 
             <!-- Bên phải: Liên hệ -->
-            <div class="md:col-span-1">
+            <div class="md:col-span-1 mb-2">
                 <div
                     class="bg-white rounded-lg shadow p-4 md:sticky md:top-20 space-y-3"
                 >
