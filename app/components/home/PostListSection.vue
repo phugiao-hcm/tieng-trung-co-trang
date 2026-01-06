@@ -1,12 +1,12 @@
 <template>
-    <section class="bg-white py-12">
+    <section class="py-12">
         <div class="max-w-screen-xl mx-auto px-4">
             <h1
-                class="text-4xl font-extrabold text-blue-500 mb-3 relative inline-block"
+                class="text-4xl font-extrabold text-orange-500 mb-3 relative inline-block"
             >
                 Học tiếng Trung tại Phước Hòa – Phú Giáo
                 <span
-                    class="absolute left-0 -bottom-2 w-30 h-1 bg-blue-500 rounded-full"
+                    class="absolute left-0 -bottom-2 w-30 h-1 bg-orange-500 rounded-full"
                 ></span>
             </h1>
             <p class="text-gray-600 mb-8">
@@ -16,9 +16,16 @@
                 vững phát âm, ngữ pháp và từ vựng thông dụng.
             </p>
 
-            <section class="bg-white py-8">
-                <div class="max-w-7xl mx-auto px-4">
-                    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <section class="py-8">
+                <div class="max-w-7xl mx-auto">
+                    <div class="mb-4">
+                        <h1
+                            class="text-xl sm:text-lg md:text-xl font-bold text-gray-800"
+                        >
+                            Bạn đang quan tâm gì?
+                        </h1>
+                    </div>
+                    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
                         <!-- Card 1 -->
                         <div
                             class="rounded-2xl bg-white p-8 text-center shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
@@ -126,21 +133,39 @@
                 </div>
             </section>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                <template v-if="pending">
-                    <Skeleton v-for="n in 4" :key="n" />
-                </template>
-                <template v-else>
-                    <PropertyCard
-                        v-for="(item, index) in postList"
-                        :key="index"
-                        :property="item"
-                    />
-                </template>
-            </div>
+            <section class="py-8 rounded-2xl bg-gray-200 px-6">
+                <div class="mb-4">
+                    <h1
+                        class="text-xl sm:text-lg md:text-xl font-bold text-gray-800"
+                    >
+                        Giáo trình cơ bản (Mẫu)
+                    </h1>
+                </div>
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
+                >
+                    <template v-if="pending">
+                        <Skeleton v-for="n in 4" :key="n" />
+                    </template>
+                    <template v-else>
+                        <PropertyCard
+                            v-for="(item, index) in postList"
+                            :key="index"
+                            :property="item"
+                        />
+                    </template>
+                </div>
+            </section>
 
-            <section class="bg-white py-8">
-                <div class="max-w-7xl mx-auto px-4">
+            <section class="py-8">
+                <div class="mb-4">
+                    <h1
+                        class="text-xl sm:text-lg md:text-xl font-bold text-gray-800"
+                    >
+                        Mẹo liên quan (Mẫu)
+                    </h1>
+                </div>
+                <div class="max-w-7xl mx-auto">
                     <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
                         <!-- Card 1 -->
                         <div

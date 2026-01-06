@@ -7,71 +7,23 @@
         <div class="md:col-span-2 space-y-4">
             <div class="w-full mx-auto overflow-hidden grid grid-cols-1 gap-4">
                 <!-- Main Swiper -->
-                <swiper
-                    class="w-full rounded-lg overflow-hidden"
-                    :space-between="10"
-                    :loop="true"
-                    :navigation="true"
-                    :pagination="{ clickable: true }"
-                    :thumbs="{ swiper: thumbsSwiper }"
-                    :modules="modules"
-                    :breakpoints="{
-                        0: { slidesPerView: 1, spaceBetween: 0 },
-                        640: { slidesPerView: 1, spaceBetween: 5 },
-                        768: { slidesPerView: 1, spaceBetween: 8 },
-                        1024: { slidesPerView: 1, spaceBetween: 10 },
-                    }"
-                >
-                    <swiper-slide
-                        v-for="(img, i) in property.photos"
-                        :key="i"
-                        class="box-border"
-                    >
-                        <img
-                            :src="img"
-                            class="w-full h-48 sm:h-56 md:h-64 lg:h-80 object-scale-down"
-                            @click="showLightbox(i)"
-                        />
-                    </swiper-slide>
-                </swiper>
-
-                <!-- Thumbnails -->
-                <swiper
-                    @swiper="setThumbsSwiper"
-                    :loop="true"
-                    :space-between="10"
-                    :slides-per-view="4.5"
-                    :freeMode="true"
-                    :watchSlidesProgress="true"
-                    :modules="modules"
-                    class="w-full"
-                >
-                    <swiper-slide
-                        v-for="(img, i) in property.photos"
-                        :key="'thumb-' + i"
-                    >
-                        <img
-                            :src="img"
-                            class="w-full h-16 sm:h-20 object-cover rounded cursor-pointer"
-                        />
-                    </swiper-slide>
-                </swiper>
-
-                <!-- Lightbox popup -->
-                <VueEasyLightbox
-                    :visible="visible"
-                    :imgs="property.photos.map((x) => x)"
-                    :index="currentIndex"
-                    @hide="visible = false"
-                    :moveDisabled="true"
-                />
+                <div class="w-full rounded-lg overflow-hidden">
+                    <iframe
+                        class="w-full h-100"
+                        src="https://www.youtube.com/embed/OohH8R-vNkk"
+                        title="YouTube Shorts"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    />
+                </div>
             </div>
 
             <!-- Tiêu đề -->
             <h1
                 class="text-xl sm:text-lg md:text-xl font-bold text-gray-800 mt-2"
             >
-                {{ property.title }}
+                Bài 1 - Giáo trình Hán ngữ 1 ( mẫu )
             </h1>
 
             <!-- Giá + diện tích -->
@@ -81,29 +33,17 @@
                 </p>
 
                 <div class="flex items-center gap-1">
-                    <p>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-4 w-4 h-4 text-gray-500 mr-1"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
-                            />
-                        </svg>
-                    </p>
-                    <p class="text-sm text-gray-600">
-                        {{ property.square }}m²
-                        <!-- <span v-if="property.viewRoom">
-                            ·
-                            {{ SET_TEXT_DIRECTION_ROOM(property.viewRoom) }}
-                        </span> -->
-                    </p>
+                    <svg
+                        v-for="item in 5"
+                        :key="item"
+                        class="w-5 h-5 text-yellow-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448 1.286 3.955c.3.921-.755 1.688-1.538 1.118L10 13.187l-3.37 2.448c-.783.57-1.838-.197-1.538-1.118l1.286-3.955-3.37-2.448c-.783-.57-.38-1.81.588-1.81h4.162l1.286-3.955z"
+                        />
+                    </svg>
                 </div>
             </div>
 
@@ -114,7 +54,7 @@
                 <span
                     v-for="(label, index) in facilityTexts(property.facility)"
                     :key="index"
-                    class="bg-blue-100 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm mb-1"
+                    class="bg-orange-100 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm mb-1"
                     >{{ label }}</span
                 >
             </div>
@@ -156,62 +96,67 @@
                     class="text-gray-700 whitespace-pre-line leading-relaxed"
                     v-html="property.content"
                 />
-                <div
-                    v-if="property.authorMobile"
-                    class="mt-4 flex flex-wrap items-center gap-2"
-                >
-                    <span class="font-semibold">SĐT Liên hệ:</span>
-                    <span
-                        class="bg-gray-100 px-3 py-1 rounded-lg text-gray-700"
-                    >
-                        {{ maskedPhone }}
-                    </span>
-                    <button
-                        class="text-blue-600 font-semibold"
-                        @click="showPhone = true"
-                    >
-                        Hiện SĐT
-                    </button>
-                </div>
             </div>
 
-            <!-- Section Google Maps -->
-            <div class="w-full h-64 md:h-96 rounded-lg overflow-hidden">
-                <iframe
-                    :src="`https://www.google.com/maps?q=${property.latitude},${property.longitude}&hl=vi&z=15&output=embed`"
-                    width="100%"
-                    height="450"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                ></iframe>
+            <!-- TRẢ LỜI BÌNH LUẬN -->
+            <div class="space-y-4">
+                <div
+                    v-for="comment in comments"
+                    :key="comment.id"
+                    class="flex gap-3"
+                >
+                    <!-- Avatar -->
+                    <img
+                        :src="comment.avatar"
+                        class="w-10 h-10 rounded-full object-cover"
+                    />
+
+                    <!-- Content -->
+                    <div class="bg-gray-100 rounded-2xl px-4 py-2 flex-1">
+                        <p class="font-semibold text-sm">{{ comment.name }}</p>
+                        <p class="text-sm text-gray-700">
+                            {{ comment.content }}
+                        </p>
+
+                        <!-- Actions -->
+                        <div class="flex gap-4 mt-1 text-xs text-gray-500">
+                            <button class="hover:text-orange-500">Thích</button>
+                            <button class="hover:text-orange-500">
+                                Trả lời
+                            </button>
+                            <span>{{ comment.time }}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Bên phải: Liên hệ -->
         <div class="md:col-span-1">
             <div
-                class="bg-white rounded-lg shadow p-4 md:sticky md:top-20 space-y-3 hidden"
+                class="bg-white rounded-lg shadow p-4 md:sticky md:top-20 space-y-3"
             >
                 <!-- Liên hệ -->
                 <div class="flex items-center gap-3 mb-3">
-                    <img
-                        src="https://placehold.co/60x60"
-                        alt="avatar"
-                        class="w-12 h-12 rounded-full"
-                    />
                     <div>
-                        <h3 class="font-semibold text-sm sm:text-xs md:text-sm">
-                            Căn hộ dịch vụ Cao Cấp (Đang câp nhạt)
+                        <h3
+                            class="font-semibold text-xl sm:text-lg md:text-xl mb-1"
+                        >
+                            Cấp độ: Sơ cấp
                         </h3>
-                        <p class="text-sm text-gray-500">Môi giới</p>
+                        <p
+                            class="text-red-600 text-sm text-sm sm:text-xs md:text-sm mb-1"
+                        >
+                            Số bài học: 15
+                        </p>
+                        <p class="text-sm text-gray-500">Thời lượng: 15 buổi</p>
                     </div>
                 </div>
 
                 <button
                     class="w-full bg-orange-500 text-white py-2 rounded-lg mb-2 hover:bg-orange-600 text-sm sm:text-xs md:text-sm"
                 >
-                    Chat ngay
+                    Đăng ký ngay
                 </button>
                 <button
                     class="w-full border border-orange-500 text-orange-500 py-2 rounded-lg hover:bg-orange-50 text-sm sm:text-xs md:text-sm"
@@ -221,6 +166,80 @@
             </div>
         </div>
     </div>
+
+    <!-- Bên phải: CÁC BÀI HỌC TIẾP THEO -->
+    <section class="bg-[#0f172a] py-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-4">
+                <h1
+                    class="text-xl sm:text-lg md:text-xl font-bold text-white mt-2"
+                >
+                    Giáo trình Hán ngữ 1 ( mẫu )
+                </h1>
+            </div>
+            <Swiper
+                :slides-per-view="1.2"
+                :space-between="20"
+                :breakpoints="{
+                    640: { slidesPerView: 2.2 },
+                    1024: { slidesPerView: 4.2 },
+                }"
+                class="overflow-visible"
+            >
+                <SwiperSlide v-for="movie in movies" :key="movie.id">
+                    <div class="group relative">
+                        <!-- CARD -->
+                        <div
+                            class="relative h-[420px] rounded-2xl overflow-hidden shadow-xl"
+                        >
+                            <img
+                                :src="movie.image"
+                                class="w-full h-full object-cover group-hover:scale-105 transition"
+                            />
+
+                            <!-- Gradient -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"
+                            ></div>
+
+                            <!-- Badge -->
+                            <div class="absolute bottom-3 left-3 flex gap-2">
+                                <span
+                                    class="px-2 py-1 text-xs bg-gray-700 text-white rounded"
+                                >
+                                    {{ movie.badge }}
+                                </span>
+                                <span
+                                    class="px-2 py-1 text-xs bg-green-600 text-white rounded"
+                                >
+                                    {{ movie.badge2 }}
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- INFO -->
+                        <div class="mt-4 relative">
+                            <!-- Rank -->
+                            <div
+                                class="absolute -left-2 -top-4 text-7xl font-black text-yellow-400 opacity-90"
+                            >
+                                {{ movie.rank }}
+                            </div>
+
+                            <div class="pl-10">
+                                <h3 class="text-white font-semibold text-lg">
+                                    {{ movie.title }}
+                                </h3>
+                                <p class="text-gray-400 text-sm">
+                                    {{ movie.sub }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+            </Swiper>
+        </div>
+    </section>
 
     <News class="hidden" />
 </template>
@@ -234,7 +253,6 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import News from "@/components/posts/News.vue";
 import { usePhongTroDetail } from "~/apis/posts";
-import VueEasyLightbox from "vue-easy-lightbox";
 const { $amplitude } = useNuxtApp();
 
 import { useRoute } from "vue-router";
@@ -257,25 +275,82 @@ const ui = reactive({
     isLoading: false,
 });
 
+const comments = ref([
+    {
+        avatar: "https://www.rophim.li/images/avatars/pack3/06.jpg",
+        name: "Nguyễn Thị Lan",
+        content:
+            "Em chưa biết gì tiếng Trung thì học khóa này có theo kịp không ạ?",
+        time: "2026/04/01",
+    },
+    {
+        avatar: "https://www.rophim.li/images/avatars/pack3/06.jpg",
+        name: "Trần Minh Quân",
+        content:
+            "Khóa học có dạy giao tiếp thực tế không hay chỉ học ngữ pháp?",
+        time: "2026/04/01",
+    },
+]);
+
+const movies = [
+    {
+        id: 1,
+        title: "Chào hỏi cơ bản",
+        sub: "基本问候",
+        image: "/images/bai-giang/tieng-trung-bai-1.png",
+        rank: 1,
+        badge: "PD. 14",
+        badge2: "TM. 14",
+    },
+    {
+        id: 2,
+        title: "Giới thiệu bản thân",
+        sub: "自我介绍",
+        image: "/images/bai-giang/tieng-trung-bai-1.png",
+        rank: 2,
+        badge: "PD. 17",
+        badge2: "TM. 17",
+    },
+    {
+        id: 3,
+        title: "Công việc / học tập",
+        sub: "工作 / 学习",
+        image: "/images/bai-giang/tieng-trung-bai-1.png",
+        rank: 3,
+        badge: "PD. 40",
+        badge2: "TM. 35",
+    },
+    {
+        id: 4,
+        title: "Hỏi phương hướng",
+        sub: "问路",
+        image: "/images/bai-giang/tieng-trung-bai-1.png",
+        rank: 4,
+        badge: "PD. 8",
+        badge2: "LT. 8",
+    },
+    {
+        id: 5,
+        title: "Sở thích",
+        sub: "兴趣爱好",
+        image: "/images/bai-giang/tieng-trung-bai-1.png",
+        rank: 5,
+        badge: "PD. 1155",
+        badge2: "LT. 1017",
+    },
+];
+
 // modules Swiper
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 // Swiper thumbs sync
 const thumbsSwiper = ref(null);
 
 const setThumbsSwiper = (swiper) => {
+    console.log("open setThumbsSwiper");
     thumbsSwiper.value = swiper;
 };
 
 const modules = [FreeMode, Navigation, Thumbs];
-
-// Lightbox state
-const visible = ref(false);
-const currentIndex = ref(0);
-
-const showLightbox = (index) => {
-    currentIndex.value = index;
-    visible.value = true;
-};
 
 // dữ liệu mẫu
 const property = ref(null);
@@ -316,13 +391,65 @@ const facilityTexts = (facilities) => {
         facilities.includes(item.value)
     ).map((item) => item.label);
 };
-
-// const mapUrl = `https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=${property.latitude},${property.longitude}`;
 </script>
 
 <style>
 /* Highlight thumbnail active */
 .swiper-slide-thumb-active img {
     border: 2px solid #f97316; /* Tailwind orange-500 */
+}
+/* Navigation container */
+.swiper-button-prev,
+.swiper-button-next {
+    width: 36px;
+    height: 36px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    color: #111;
+    transition: all 0.2s ease;
+}
+
+/* Hover & active */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    transform: scale(1.1);
+}
+
+.swiper-button-prev:active,
+.swiper-button-next:active {
+    transform: scale(0.95);
+}
+
+/* Icon size */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Position đẹp hơn */
+.swiper-button-prev {
+    left: 8px;
+}
+
+.swiper-button-next {
+    right: 8px;
+}
+
+.custom-lightbox {
+    background: white;
+}
+
+.btn__next,
+.btn__prev {
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    padding: 6px;
+
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    color: #111 !important;
+    transition: all 0.2s ease;
 }
 </style>

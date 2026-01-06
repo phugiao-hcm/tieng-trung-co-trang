@@ -16,7 +16,7 @@
                 </span>
                 <NuxtLink
                     to="#"
-                    class="text-sm font-medium leading-snug hover:text-blue-600"
+                    class="text-sm font-medium leading-snug hover:text-orange-600"
                 >
                     {{ post }}
                 </NuxtLink>

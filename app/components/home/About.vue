@@ -3,10 +3,9 @@
         <div class="max-w-6xl mx-auto px-4">
             <!-- Tiêu đề -->
             <div class="text-center mb-12">
-                <h1 class="text-4xl font-bold text-blue-600">Về Chúng Tôi</h1>
+                <h1 class="text-4xl font-bold text-orange-600">Về Chúng Tôi</h1>
                 <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-                    Tiếng Trung Cô Trang - Kết nối Tiếng Trung Cô Trang uy tín,
-                    minh bạch và tận tâm.
+                    Tiếng Trung Phước Hòa - uy tín, minh bạch và tận tâm.
                 </p>
             </div>
 
@@ -18,11 +17,11 @@
                     class="rounded-2xl shadow-md"
                 />
                 <div>
-                    <h2 class="text-2xl font-semibold mb-3 text-blue-500">
+                    <h2 class="text-2xl font-semibold mb-3 text-orange-500">
                         Chúng tôi là ai?
                     </h2>
                     <p class="text-gray-700 leading-relaxed">
-                        Tiếng Trung Cô Trang tư vấn tận tâm và kinh nghiệm,
+                        Tiếng Trung Phước Hòa tư vấn tận tâm và kinh nghiệm,
                         chúng tôi cam kết mang lại giải pháp phù hợp và an toàn
                         nhất cho khách hàng.
                     </p>
@@ -31,8 +30,8 @@
 
             <!-- Tầm nhìn & Sứ mệnh -->
             <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-blue-50 p-6 rounded-xl shadow-md">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-2">
+                <div class="bg-orange-50 p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold text-orange-600 mb-2">
                         Tầm nhìn
                     </h3>
                     <p class="text-gray-700">
@@ -41,8 +40,8 @@
                         hàng.
                     </p>
                 </div>
-                <div class="bg-blue-50 p-6 rounded-xl shadow-md">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-2">
+                <div class="bg-orange-50 p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold text-orange-600 mb-2">
                         Sứ mệnh
                     </h3>
                     <p class="text-gray-700">
@@ -55,7 +54,7 @@
             <!-- Ưu điểm nổi bật -->
             <div class="mt-20">
                 <h2
-                    class="text-2xl font-semibold text-center text-blue-600 mb-6"
+                    class="text-2xl font-semibold text-center text-orange-600 mb-6"
                 >
                     Tại sao chọn chúng tôi?
                 </h2>
@@ -64,7 +63,7 @@
                         class="bg-white p-6 shadow-md rounded-xl text-center border"
                     >
                         <i
-                            class="i-lucide-shield-check text-4xl text-blue-500 mb-2"
+                            class="i-lucide-shield-check text-4xl text-orange-500 mb-2"
                         ></i>
                         <h4 class="font-semibold mb-1">Uy tín hàng đầu</h4>
                         <p class="text-gray-600 text-sm">
@@ -75,7 +74,7 @@
                         class="bg-white p-6 shadow-md rounded-xl text-center border"
                     >
                         <i
-                            class="i-lucide-users text-4xl text-blue-500 mb-2"
+                            class="i-lucide-users text-4xl text-orange-500 mb-2"
                         ></i>
                         <h4 class="font-semibold mb-1">Tư vấn tận tâm</h4>
                         <p class="text-gray-600 text-sm">
@@ -86,7 +85,7 @@
                         class="bg-white p-6 shadow-md rounded-xl text-center border"
                     >
                         <i
-                            class="i-lucide-map-pin text-4xl text-blue-500 mb-2"
+                            class="i-lucide-map-pin text-4xl text-orange-500 mb-2"
                         ></i>
                         <h4 class="font-semibold mb-1">Sản phẩm phong phú</h4>
                         <p class="text-gray-600 text-sm">

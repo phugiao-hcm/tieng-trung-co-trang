@@ -17,7 +17,7 @@
             <NuxtLink
                 to="/"
                 @click="onClickViewRoom"
-                class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition"
+                class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition"
             >
                 Vào học ngay
             </NuxtLink>

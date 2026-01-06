@@ -3,7 +3,7 @@
         <!-- Nút gọi điện nằm trong layout -->
         <a
             href="tel:0937704598"
-            class="hidden md:flex fixed bottom-6 right-6 bg-orange-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition duration-300 z-[9999]"
+            class="hidden md:flex fixed bottom-6 right-6 bg-orange-500 text-white p-4 rounded-full shadow-lg hover:bg-orange-600 transition duration-300 z-[9999]"
             aria-label="Gọi ngay"
         >
             <svg
@@ -27,7 +27,7 @@
             href="https://m.me/ffer.tosu/"
             target="_blank"
             rel="noopener noreferrer"
-            class="hidden md:flex fixed bottom-[5.5rem] right-6 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 z-[9999]"
+            class="hidden md:flex fixed bottom-[5.5rem] right-6 bg-orange-600 text-white p-4 rounded-full shadow-lg hover:bg-orange-700 transition duration-300 z-[9999]"
             aria-label="Liên hệ qua Messenger"
         >
             <svg

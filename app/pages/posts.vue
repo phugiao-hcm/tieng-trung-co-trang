@@ -5,11 +5,11 @@
             <!-- Title -->
             <div>
                 <h1
-                    class="text-3xl md:text-4xl font-extrabold text-blue-500 mb-3 relative inline-block"
+                    class="text-3xl md:text-4xl font-extrabold text-orange-500 mb-3 relative inline-block"
                 >
                     Phòng trọ Phú Giáo, KCN Tân Bình, Bình Dương
                     <span
-                        class="absolute left-0 -bottom-1 w-50 h-1 bg-blue-500 rounded-full"
+                        class="absolute left-0 -bottom-1 w-50 h-1 bg-orange-500 rounded-full"
                     ></span>
                 </h1>
                 <p class="text-gray-600 mb-8 max-w-xl">
@@ -22,12 +22,6 @@
                 <!-- Main -->
                 <main class="flex-1 order-1 md:order-none">
                     <!-- Mobile Filter Button -->
-                    <!-- <div class="md:hidden flex justify-end mb-4">
-                        <FilterSidebar
-                            :show="showFilter"
-                            @close="closeFilter"
-                        />
-                    </div> -->
                     <div class="flex justify-end mb-4 hidden">
                         <FilterSidebar
                             :show="showFilter"
@@ -133,7 +127,7 @@
                                             :class="
                                                 hotel?.numORoomAvailable === 0
                                                     ? 'text-gray-400'
-                                                    : 'text-blue-600 dark:text-blue-500'
+                                                    : 'text-orange-600 dark:text-orange-500'
                                             "
                                         >
                                             {{ hotel.title }}
@@ -206,7 +200,7 @@
                                                 hotel.facilities
                                             )"
                                             :key="index"
-                                            class="bg-blue-100 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm mb-1"
+                                            class="bg-orange-100 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm mb-1"
                                             >{{ label }}</span
                                         >
                                     </div> -->
@@ -276,7 +270,7 @@
                         <p>
                             <a
                                 href="tel:0937704598"
-                                class="text-blue-400 hover:underline"
+                                class="text-orange-400 hover:underline"
                                 >0937 704 598</a
                             >
                         </p>
@@ -329,21 +323,21 @@
                                 <label class="flex items-center gap-2">
                                     <input
                                         type="radio"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm"
+                                        class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded-sm"
                                     />
                                     ≥ 4.5 ⭐
                                 </label>
                                 <label class="flex items-center gap-2">
                                     <input
                                         type="radio"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm"
+                                        class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded-sm"
                                     />
                                     ≥ 4.0 ⭐
                                 </label>
                                 <label class="flex items-center gap-2">
                                     <input
                                         type="radio"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm"
+                                        class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded-sm"
                                     />
                                     ≥ 3.5 ⭐
                                 </label>
@@ -357,28 +351,28 @@
                                 <label class="flex items-center gap-2">
                                     <input
                                         type="checkbox"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm"
+                                        class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded-sm"
                                     />
                                     Wi-Fi miễn phí
                                 </label>
                                 <label class="flex items-center gap-2">
                                     <input
                                         type="checkbox"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm"
+                                        class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded-sm"
                                     />
                                     Quản lý 24/24
                                 </label>
                                 <label class="flex items-center gap-2">
                                     <input
                                         type="checkbox"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm"
+                                        class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded-sm"
                                     />
                                     Bãi giữ xe
                                 </label>
                                 <label class="flex items-center gap-2">
                                     <input
                                         type="checkbox"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm"
+                                        class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded-sm"
                                     />
                                     Thang máy
                                 </label>
@@ -392,28 +386,28 @@
                                 <label class="flex items-center gap-2">
                                     <input
                                         type="checkbox"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm"
+                                        class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded-sm"
                                     />
                                     Chợ
                                 </label>
                                 <label class="flex items-center gap-2">
                                     <input
                                         type="checkbox"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm"
+                                        class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded-sm"
                                     />
                                     Trường học
                                 </label>
                                 <label class="flex items-center gap-2">
                                     <input
                                         type="checkbox"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm"
+                                        class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded-sm"
                                     />
                                     Cửa hàng tiện lợi
                                 </label>
                                 <label class="flex items-center gap-2">
                                     <input
                                         type="checkbox"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm"
+                                        class="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded-sm"
                                     />
                                     Khu công nghiệp
                                 </label>

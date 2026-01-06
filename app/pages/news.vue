@@ -1,7 +1,7 @@
 <template>
     <div class="bg-gray-50 text-gray-800">
         <!-- Hero Section -->
-        <section class="bg-gradient-to-r from-blue-50 to-white py-20">
+        <section class="bg-gradient-to-r from-orange-50 to-white py-20">
             <div class="max-w-6xl mx-auto px-4 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
                     Tin tức phòng trọ mới nhất

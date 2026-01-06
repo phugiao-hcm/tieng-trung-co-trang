@@ -5,7 +5,7 @@
         >
             <!-- Logo & giới thiệu -->
             <div>
-                <h2 class="text-xl font-bold mb-2">Tiếng Trung Cô Trang</h2>
+                <h2 class="text-xl font-bold mb-2">Tiếng Trung Phước Hòa</h2>
                 <p class="text-gray-400 text-sm">
                     Giúp người học nhớ nhanh, nhớ lâu và nhớ sâu chữ Hán – Phần
                     khó nhất trong qua trình học tiếng Trung. Uy tín - Minh bạch
@@ -22,12 +22,12 @@
                 <h3 class="font-semibold mb-3">Liên kết nhanh</h3>
                 <ul class="space-y-2 text-sm text-gray-300">
                     <li>
-                        <NuxtLink to="/" class="hover:text-blue-400">
+                        <NuxtLink to="/" class="hover:text-orange-400">
                             Khóa học
                         </NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/" class="hover:text-blue-400">
+                        <NuxtLink to="/" class="hover:text-orange-400">
                             Liên hệ
                         </NuxtLink>
                     </li>
@@ -41,7 +41,7 @@
                     Hotline/Zalo tư vấn:
                     <a
                         href="tel:0937704598"
-                        class="text-blue-400 hover:underline"
+                        class="text-orange-400 hover:underline"
                         >0937 704 598</a
                     >
                 </p>
@@ -52,7 +52,7 @@
         <div
             class="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-500"
         >
-            &copy; 2025 Tiếng Trung Cô Trang. All rights reserved.
+            &copy; 2025 Tiếng Trung Phước Hòa. All rights reserved.
         </div>
     </footer>
 </template>

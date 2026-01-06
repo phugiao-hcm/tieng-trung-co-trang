@@ -14,7 +14,7 @@
                 class="h-full w-full object-cover group-hover:scale-105 transition duration-300"
             />
             <span
-                class="absolute top-2 left-2 rounded-full bg-blue-600 px-2 py-0.5 text-[11px] font-medium text-white"
+                class="absolute top-2 left-2 rounded-full bg-orange-600 px-2 py-0.5 text-[11px] font-medium text-white"
             >
                 {{ category }}
             </span>
@@ -24,7 +24,7 @@
         <div class="flex flex-1 flex-col justify-between p-3 sm:p-4">
             <div>
                 <h3
-                    class="mb-1 line-clamp-2 text-sm font-semibold text-gray-800 group-hover:text-blue-600 sm:text-base"
+                    class="mb-1 line-clamp-2 text-sm font-semibold text-gray-800 group-hover:text-orange-600 sm:text-base"
                 >
                     {{ title }}
                 </h3>
@@ -38,7 +38,7 @@
                 class="mt-2 flex items-center justify-between text-[11px] text-gray-500 sm:text-xs"
             >
                 <span>{{ date }}</span>
-                <span class="font-medium text-blue-600">Xem chi tiết →</span>
+                <span class="font-medium text-orange-600">Xem chi tiết →</span>
             </div>
         </div>
     </NuxtLink>

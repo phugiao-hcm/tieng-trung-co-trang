@@ -1,7 +1,7 @@
 <template>
     <div class="bg-gray-50 text-gray-800">
         <!-- Hero Section -->
-        <section class="bg-gradient-to-r from-blue-50 to-white py-20">
+        <section class="bg-gradient-to-r from-orange-50 to-white py-20">
             <div class="max-w-6xl mx-auto px-4 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
                     Về Chúng Tôi
@@ -50,7 +50,7 @@
                         href="https://www.facebook.com/groups/1513290416777599"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md transition duration-200"
+                        class="flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white font-medium py-3 px-6 rounded-lg shadow-md transition duration-200"
                     >
                         <!-- Facebook Icon -->
                         <svg
@@ -71,19 +71,19 @@
 
         <!-- Footer CTA -->
         <section
-            class="bg-gradient-to-r from-blue-600 to-blue-500 py-16 text-white"
+            class="bg-gradient-to-r from-orange-600 to-orange-500 py-16 text-white"
         >
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4">
                     Bạn muốn hợp tác với chúng tôi?
                 </h2>
-                <p class="text-blue-100 mb-6">
+                <p class="text-orange-100 mb-6">
                     Chúng tôi luôn tìm kiếm những đối tác, nhà cung cấp và thành
                     viên mới cho đội ngũ của mình.
                 </p>
                 <a
                     href="tel:0937704598"
-                    class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold shadow hover:bg-gray-100 transition"
+                    class="inline-block bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold shadow hover:bg-gray-100 transition"
                 >
                     📞 Liên hệ ngay: 0937 704 598
                 </a>
