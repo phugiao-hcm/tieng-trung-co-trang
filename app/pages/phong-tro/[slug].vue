@@ -1,174 +1,174 @@
 <template>
-    <div
-        v-if="!ui.isLoading && property"
-        class="max-w-6xl mx-auto mt-6 px-4 md:px-0 grid gap-4 sm:grid-cols-1 md:grid-cols-3"
-    >
-        <!-- Bên trái: Hình ảnh và thông tin -->
-        <div class="md:col-span-2 space-y-4">
-            <div class="w-full mx-auto overflow-hidden grid grid-cols-1 gap-4">
-                <!-- Main Swiper -->
-                <div class="w-full rounded-lg overflow-hidden">
-                    <iframe
-                        class="w-full h-100"
-                        src="https://www.youtube.com/embed/OohH8R-vNkk"
-                        title="YouTube Shorts"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
+    <section v-if="!ui.isLoading && property">
+        <div
+            class="max-w-6xl mx-auto mt-6 px-4 md:px-0 grid gap-4 sm:grid-cols-1 md:grid-cols-3"
+        >
+            <!-- Bên trái: Hình ảnh và thông tin -->
+            <div class="md:col-span-2 space-y-4">
+                <div
+                    class="w-full mx-auto overflow-hidden grid grid-cols-1 gap-4"
+                >
+                    <!-- Main Swiper -->
+                    <div class="w-full rounded-lg overflow-hidden">
+                        <iframe
+                            class="w-full h-100"
+                            src="https://www.youtube.com/embed/OohH8R-vNkk"
+                            title="YouTube Shorts"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        />
+                    </div>
+                </div>
+
+                <!-- Tiêu đề -->
+                <h1
+                    class="text-xl sm:text-lg md:text-xl font-bold text-gray-800 mt-2"
+                >
+                    Bài 1 - Giáo trình Hán ngữ 1 ( mẫu )
+                </h1>
+
+                <!-- Giá + diện tích -->
+                <div class="flex flex-wrap items-center gap-3 mt-2">
+                    <p class="text-red-600 text-2xl sm:text-xl font-semibold">
+                        {{ formatPriceVND(property.price) }} /tháng
+                    </p>
+
+                    <div class="flex items-center gap-1">
+                        <svg
+                            v-for="item in 5"
+                            :key="item"
+                            class="w-5 h-5 text-yellow-400"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448 1.286 3.955c.3.921-.755 1.688-1.538 1.118L10 13.187l-3.37 2.448c-.783.57-1.838-.197-1.538-1.118l1.286-3.955-3.37-2.448c-.783-.57-.38-1.81.588-1.81h4.162l1.286-3.955z"
+                            />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Địa chỉ -->
+                <div
+                    class="flex items-center text-gray-600 mt-2 text-sm sm:text-xs md:text-sm"
+                >
+                    <P>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4 w-4 h-4 text-gray-500 mr-1"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                            />
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                            />
+                        </svg>
+                    </P>
+                    <p class="text-sm text-gray-800">
+                        {{ property.houseNo }}
+                    </p>
+                </div>
+
+                <!-- MÔ TẢ CHI TIẾT -->
+                <div class="bg-white rounded-lg shadow p-4 mt-4 md:mt-6">
+                    <h2 class="font-bold text-lg mb-3">Mô tả chi tiết</h2>
+                    <div
+                        class="text-gray-700 whitespace-pre-line leading-relaxed"
+                        v-html="property.content"
                     />
                 </div>
-            </div>
 
-            <!-- Tiêu đề -->
-            <h1
-                class="text-xl sm:text-lg md:text-xl font-bold text-gray-800 mt-2"
-            >
-                Bài 1 - Giáo trình Hán ngữ 1 ( mẫu )
-            </h1>
-
-            <!-- Giá + diện tích -->
-            <div class="flex flex-wrap items-center gap-3 mt-2">
-                <p class="text-red-600 text-2xl sm:text-xl font-semibold">
-                    {{ formatPriceVND(property.price) }} /tháng
-                </p>
-
-                <div class="flex items-center gap-1">
-                    <svg
-                        v-for="item in 5"
-                        :key="item"
-                        class="w-5 h-5 text-yellow-400"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
+                <!-- TRẢ LỜI BÌNH LUẬN -->
+                <div class="space-y-4">
+                    <h1 class="text-xl sm:text-lg md:text-xl font-bold mt-2">
+                        Bình luận (20)
+                    </h1>
+                    <div
+                        v-for="comment in comments"
+                        :key="comment.id"
+                        class="flex gap-3"
                     >
-                        <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448 1.286 3.955c.3.921-.755 1.688-1.538 1.118L10 13.187l-3.37 2.448c-.783.57-1.838-.197-1.538-1.118l1.286-3.955-3.37-2.448c-.783-.57-.38-1.81.588-1.81h4.162l1.286-3.955z"
+                        <!-- Avatar -->
+                        <img
+                            :src="comment.avatar"
+                            class="w-10 h-10 rounded-full object-cover"
                         />
-                    </svg>
-                </div>
-            </div>
 
-            <div class="mb-1 flex flex-wrap">
-                <span class="text-sm text-gray-600 mr-2"
-                    >Tiện ích xung quanh:</span
-                >
-                <span
-                    v-for="(label, index) in facilityTexts(property.facility)"
-                    :key="index"
-                    class="bg-orange-100 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm mb-1"
-                    >{{ label }}</span
-                >
-            </div>
+                        <!-- Content -->
+                        <div class="bg-gray-100 rounded-2xl px-4 py-2 flex-1">
+                            <p class="font-semibold text-sm">
+                                {{ comment.name }}
+                            </p>
+                            <p class="text-sm text-gray-700">
+                                {{ comment.content }}
+                            </p>
 
-            <!-- Địa chỉ -->
-            <div
-                class="flex items-center text-gray-600 mt-2 text-sm sm:text-xs md:text-sm"
-            >
-                <P>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-4 w-4 h-4 text-gray-500 mr-1"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                        />
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
-                        />
-                    </svg>
-                </P>
-                <p class="text-sm text-gray-800">
-                    {{ property.houseNo }}
-                </p>
-            </div>
-
-            <!-- MÔ TẢ CHI TIẾT -->
-            <div class="bg-white rounded-lg shadow p-4 mt-4 md:mt-6">
-                <h2 class="font-bold text-lg mb-3">Mô tả chi tiết</h2>
-                <div
-                    class="text-gray-700 whitespace-pre-line leading-relaxed"
-                    v-html="property.content"
-                />
-            </div>
-
-            <!-- TRẢ LỜI BÌNH LUẬN -->
-            <div class="space-y-4">
-                <div
-                    v-for="comment in comments"
-                    :key="comment.id"
-                    class="flex gap-3"
-                >
-                    <!-- Avatar -->
-                    <img
-                        :src="comment.avatar"
-                        class="w-10 h-10 rounded-full object-cover"
-                    />
-
-                    <!-- Content -->
-                    <div class="bg-gray-100 rounded-2xl px-4 py-2 flex-1">
-                        <p class="font-semibold text-sm">{{ comment.name }}</p>
-                        <p class="text-sm text-gray-700">
-                            {{ comment.content }}
-                        </p>
-
-                        <!-- Actions -->
-                        <div class="flex gap-4 mt-1 text-xs text-gray-500">
-                            <button class="hover:text-orange-500">Thích</button>
-                            <button class="hover:text-orange-500">
-                                Trả lời
-                            </button>
-                            <span>{{ comment.time }}</span>
+                            <!-- Actions -->
+                            <div class="flex gap-4 mt-1 text-xs text-gray-500">
+                                <button class="hover:text-orange-500">
+                                    Thích
+                                </button>
+                                <button class="hover:text-orange-500">
+                                    Trả lời
+                                </button>
+                                <span>{{ comment.time }}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Bên phải: Liên hệ -->
-        <div class="md:col-span-1">
-            <div
-                class="bg-white rounded-lg shadow p-4 md:sticky md:top-20 space-y-3"
-            >
-                <!-- Liên hệ -->
-                <div class="flex items-center gap-3 mb-3">
-                    <div>
-                        <h3
-                            class="font-semibold text-xl sm:text-lg md:text-xl mb-1"
-                        >
-                            Cấp độ: Sơ cấp
-                        </h3>
-                        <p
-                            class="text-red-600 text-sm text-sm sm:text-xs md:text-sm mb-1"
-                        >
-                            Số bài học: 15
-                        </p>
-                        <p class="text-sm text-gray-500">Thời lượng: 15 buổi</p>
+            <!-- Bên phải: Liên hệ -->
+            <div class="md:col-span-1">
+                <div
+                    class="bg-white rounded-lg shadow p-4 md:sticky md:top-20 space-y-3"
+                >
+                    <!-- Liên hệ -->
+                    <div class="flex items-center gap-3 mb-3">
+                        <div>
+                            <h3
+                                class="font-semibold text-xl sm:text-lg md:text-xl mb-1"
+                            >
+                                Cấp độ: Sơ cấp
+                            </h3>
+                            <p
+                                class="text-red-600 text-sm text-sm sm:text-xs md:text-sm mb-1"
+                            >
+                                Số bài học: 15
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                Thời lượng: 15 buổi
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <button
-                    class="w-full bg-orange-500 text-white py-2 rounded-lg mb-2 hover:bg-orange-600 text-sm sm:text-xs md:text-sm"
-                >
-                    Đăng ký ngay
-                </button>
-                <button
-                    class="w-full border border-orange-500 text-orange-500 py-2 rounded-lg hover:bg-orange-50 text-sm sm:text-xs md:text-sm"
-                >
-                    Gọi: 093770xxxx
-                </button>
+                    <button
+                        class="w-full bg-orange-500 text-white py-2 rounded-lg mb-2 hover:bg-orange-600 text-sm sm:text-xs md:text-sm"
+                    >
+                        Đăng ký ngay
+                    </button>
+                    <button
+                        class="w-full border border-orange-500 text-orange-500 py-2 rounded-lg hover:bg-orange-50 text-sm sm:text-xs md:text-sm"
+                    >
+                        Gọi: 093770xxxx
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Bên phải: CÁC BÀI HỌC TIẾP THEO -->
-    <section class="bg-[#0f172a] py-10">
+    <section class="bg-[#0f172a] py-10 mt-6">
         <div class="max-w-7xl mx-auto px-4">
             <div class="mb-4">
                 <h1
@@ -281,14 +281,14 @@ const comments = ref([
         name: "Nguyễn Thị Lan",
         content:
             "Em chưa biết gì tiếng Trung thì học khóa này có theo kịp không ạ?",
-        time: "2026/04/01",
+        time: "01/01/2026",
     },
     {
         avatar: "https://www.rophim.li/images/avatars/pack3/06.jpg",
         name: "Trần Minh Quân",
         content:
             "Khóa học có dạy giao tiếp thực tế không hay chỉ học ngữ pháp?",
-        time: "2026/04/01",
+        time: "05/01/2026",
     },
 ]);
 
