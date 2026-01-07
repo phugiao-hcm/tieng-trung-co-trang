@@ -46,12 +46,12 @@
                     >
                 </nav>
 
-                <!-- Đăng nhập button -->
+                <!-- Khu vực Học Viên button -->
                 <NuxtLink
                     to="/"
                     class="ml-4 bg-white hover:bg-white-100 border text-black-600 font-semibold py-2 px-4 rounded-lg transition-colors"
                 >
-                    Đăng nhập
+                    Khu vực Học Viên
                 </NuxtLink>
             </div>
 
@@ -121,12 +121,12 @@
                 >Về chúng tôi</NuxtLink
             >
 
-            <!-- Mobile Đăng nhập button -->
+            <!-- Mobile Khu vực Học Viên button -->
             <NuxtLink
                 to="/"
                 class="block mt-2 bg-white hover:bg-white-100 border text-black-600 font-semibold py-2 px-4 rounded-lg text-center transition-colors"
             >
-                Đăng nhập
+                Khu vực Học Viên
             </NuxtLink>
         </div>
     </header>
